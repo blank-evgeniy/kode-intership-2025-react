@@ -1,3 +1,5 @@
-const App = () => <div>app</div>;
+import { AppRouter } from "./providers/router/appRouter";
+
+const App = () => <AppRouter />;
 
 export default App;
