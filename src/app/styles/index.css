@@ -28,6 +28,9 @@
 
   --accent-color: var(--purple-100);
   --danger-color: var(--red-100);
+
+  /* sizes */
+  --input-height: 40px;
 }
 
 body {
