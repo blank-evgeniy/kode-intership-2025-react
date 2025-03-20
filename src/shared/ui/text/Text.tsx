@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { TextColorsType, TextWeight } from "./types";
-import { CssSize } from "@/shared/types";
+import { TextColorsType } from "./types";
+import { CssSize, CssTextWeight } from "@/shared/types";
 
 export const Text = styled.p<{
   $size?: CssSize;
-  $weight?: TextWeight;
+  $weight?: CssTextWeight;
   $lineHeight?: CssSize;
   $color?: TextColorsType;
 }>`

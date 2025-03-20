@@ -5,5 +5,3 @@ export const TextColors = {
 } as const;
 
 export type TextColorsType = (typeof TextColors)[keyof typeof TextColors];
-
-export type TextWeight = "400" | "500" | "600" | "700";

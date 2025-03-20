@@ -7,3 +7,5 @@ export type CssSize = `${number}${
   | "vmin"
   | "vmax"
   | "%"}`;
+
+export type CssTextWeight = "400" | "500" | "600" | "700";
