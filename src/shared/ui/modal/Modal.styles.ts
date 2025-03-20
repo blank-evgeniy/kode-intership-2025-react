@@ -35,7 +35,7 @@ export const StyledModalHeading = styled.h2`
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-  color: var(--text-black);
+  color: var(--text-primary);
   text-align: center;
 `;
 
@@ -45,7 +45,7 @@ export const CrossButton = styled.button`
   right: 24px;
 
   border-radius: 50%;
-  color: var(--text-gray-100);
+  color: var(--gray-200);
   background: var(--background-secondary);
   border: none;
   cursor: pointer;

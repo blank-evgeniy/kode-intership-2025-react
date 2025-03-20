@@ -37,7 +37,7 @@ export const Tab = styled.button<{ $isActive: boolean }>`
   ${({ $isActive }) =>
     $isActive &&
     `border-bottom: 2px solid var(--accent-color);
-    color: var(--text-black) !important;`}
+    color: var(--text-primary) !important;`}
 `;
 
 export const TabContent = styled.div`
