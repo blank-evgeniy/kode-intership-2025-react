@@ -1,9 +1,10 @@
+import { CssSize } from "@/shared/types";
 import { StyledSkeleton } from "./Skeleton.styles";
 
 interface SkeletonProps {
-  width?: string;
-  height?: string;
-  radius?: string;
+  width?: CssSize;
+  height?: CssSize;
+  radius?: CssSize;
 }
 
 export const Skeleton = ({ width, height, radius }: SkeletonProps) => {

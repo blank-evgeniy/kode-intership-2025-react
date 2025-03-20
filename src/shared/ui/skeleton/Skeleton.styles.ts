@@ -1,3 +1,4 @@
+import { CssSize } from "@/shared/types";
 import styled, { keyframes } from "styled-components";
 
 // Анимация для переливающегося градиента
@@ -11,9 +12,9 @@ const skeletonAnimation = keyframes`
 ;`;
 
 export const StyledSkeleton = styled.div<{
-  $width?: string;
-  $height?: string;
-  $radius?: string;
+  $width?: CssSize;
+  $height?: CssSize;
+  $radius?: CssSize;
 }>`
   display: inline-block;
   width: ${({ $width }) => $width || "100%"};
