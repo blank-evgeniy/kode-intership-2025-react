@@ -32,6 +32,7 @@
   /* sizes */
   --input-height: 40px;
   --tab-height: 36px;
+  --page-container: 1280px;
 }
 
 body {
