@@ -1,4 +1,4 @@
-import { SearchBar } from "@/features/search-bar";
+import { AppSearchBar } from "@/widgets/app-search-bar";
 import { Container } from "@/shared/ui/container/Container";
 import { Heading } from "@/shared/ui/heading/Heading";
 
@@ -12,7 +12,7 @@ export const MainPage = () => {
       </HeadingContainer>
 
       <SearchBarContainer>
-        <SearchBar />
+        <AppSearchBar />
       </SearchBarContainer>
     </Container>
   );
