@@ -21,7 +21,7 @@ export const UserCard = ({ user }: UserCardProps) => {
   return (
     <Link to={RoutePath.DETAILS.replace(":id", user.id)}>
       <UserCardContainer>
-        <Avatar size="md" src={avatarUrl} />
+        <Avatar alt={`${firstName} ${lastName}`} size="md" src={avatarUrl} />
 
         <InfoContainer>
           <NameContainer>

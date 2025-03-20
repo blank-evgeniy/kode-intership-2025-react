@@ -4,10 +4,10 @@ import { ButtonVariant, ButtonVariants } from "./ButtonVariants";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  variant: ButtonVariant;
+  variant?: ButtonVariant;
 }
 
-const getButton = (variant: ButtonVariant) =>
+const getButton = (variant: ButtonVariant = "text") =>
   ({
     [ButtonVariants.text]: TextButton,
     [ButtonVariants.icon]: IconButton,
