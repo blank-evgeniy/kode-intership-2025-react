@@ -43,11 +43,10 @@ export const usersSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(fetchUsersByDepartment.fulfilled, (state, action) => {
-      state.loading = false;
-
       const department = action.meta.arg;
       state.departments[department] = action.payload;
       state.lastFetched[department] = Date.now();
+      state.loading = false;
     });
     builder.addCase(fetchUsersByDepartment.pending, (state) => {
       state.loading = true;

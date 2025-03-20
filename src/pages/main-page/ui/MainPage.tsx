@@ -3,6 +3,7 @@ import { Container } from "@/shared/ui/container/Container";
 import { Heading } from "@/shared/ui/heading/Heading";
 
 import { HeadingContainer, SearchBarContainer } from "./MainPage.styles";
+import { DepartmentsTabs } from "./DepartmentsTabs";
 
 export const MainPage = () => {
   return (
@@ -14,6 +15,8 @@ export const MainPage = () => {
       <SearchBarContainer>
         <AppSearchBar />
       </SearchBarContainer>
+
+      <DepartmentsTabs />
     </Container>
   );
 };

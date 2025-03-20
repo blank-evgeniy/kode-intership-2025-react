@@ -7,10 +7,12 @@ interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   size?: AvatarSizes;
 }
 
-export const Avatar = ({ size = AvatarSizes.md, ...props }: AvatarProps) => {
-  // изображения не грузятся с сервера
-  // const [avatarSrc, setAvatarSrc] = useState(props.src || AvatarPlaceholder);
-  const [avatarSrc, setAvatarSrc] = useState(AvatarPlaceholder);
+export const Avatar = ({
+  size = AvatarSizes.md,
+  src,
+  ...props
+}: AvatarProps) => {
+  const [avatarSrc, setAvatarSrc] = useState(src || AvatarPlaceholder);
 
   return (
     <StyledAvatar
