@@ -1,6 +1,7 @@
 import { JSX } from "react";
 import { RoutePath, RoutePathType } from "@/app/config/routes";
 import { MainPage } from "@/pages/main-page";
+import { DetailsPage } from "@/pages/details-page";
 
 interface Route {
   path: RoutePathType;
@@ -14,7 +15,7 @@ export const routes: Route[] = [
   },
   {
     path: RoutePath.DETAILS,
-    element: <div>details page</div>,
+    element: <DetailsPage />,
   },
   {
     path: RoutePath.NOT_FOUND,
