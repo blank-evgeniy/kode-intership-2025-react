@@ -6,6 +6,6 @@ interface SortVariant {
 }
 
 export const sortVariants: SortVariant[] = [
-  { value: "alphabetical", label: "По алфавиту" },
-  { value: "birthday", label: "По дню рождения" },
+  { value: "alphabetical", label: "byAlphabet" },
+  { value: "birthday", label: "byBirthday" },
 ];

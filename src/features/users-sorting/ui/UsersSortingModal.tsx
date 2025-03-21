@@ -4,14 +4,18 @@ import { RadioGroup, RadioGroupItem } from "@/shared/ui/radio-group/RadioGroup";
 
 import { sortVariants } from "../model/sortVariants";
 import { useUsersSorting } from "../model/useUsersSorting";
+import { useTranslation } from "react-i18next";
 
 export const UsersSortingModal = React.memo(
   ({ isOpen, onClose }: ModalProps) => {
     const { sortBy, handleChangeSort } = useUsersSorting();
+    const { t } = useTranslation("common");
 
     return (
       <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalHeading style={{ marginBottom: "16px" }}>Сортировка</ModalHeading>
+        <ModalHeading style={{ marginBottom: "16px" }}>
+          {t("sorting")}
+        </ModalHeading>
         <RadioGroup>
           {sortVariants.map((variant) => (
             <RadioGroupItem
@@ -24,7 +28,7 @@ export const UsersSortingModal = React.memo(
               }}
               key={variant.value}
               id={variant.value}
-              label={variant.label}
+              label={t(variant.label)}
             />
           ))}
         </RadioGroup>

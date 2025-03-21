@@ -8,6 +8,7 @@ import {
 } from "./Tabs.styles";
 
 export interface Tab {
+  id: string;
   label: string;
   content: React.ReactNode;
 }
@@ -17,10 +18,10 @@ interface TabsProps {
 }
 
 const Tabs = ({ tabs }: TabsProps) => {
-  const [activeTab, setActiveTab] = useState<string>(tabs[0]?.label || "");
+  const [activeTab, setActiveTab] = useState<string>(tabs[0]?.id || "");
 
-  const handleTabClick = useCallback((tabLabel: string) => {
-    setActiveTab(tabLabel);
+  const handleTabClick = useCallback((tabId: string) => {
+    setActiveTab(tabId);
   }, []);
 
   return (
@@ -29,8 +30,8 @@ const Tabs = ({ tabs }: TabsProps) => {
         {tabs.map((tab) => (
           <Tab
             key={tab.label}
-            $isActive={activeTab === tab.label}
-            onClick={() => handleTabClick(tab.label)}
+            $isActive={activeTab === tab.id}
+            onClick={() => handleTabClick(tab.id)}
           >
             {tab.label}
           </Tab>
@@ -39,9 +40,7 @@ const Tabs = ({ tabs }: TabsProps) => {
       <TabsSeparator />
       <TabContent>
         {tabs.map((tab) =>
-          activeTab === tab.label ? (
-            <div key={tab.label}>{tab.content}</div>
-          ) : null
+          activeTab === tab.id ? <div key={tab.id}>{tab.content}</div> : null
         )}
       </TabContent>
     </TabsContainer>

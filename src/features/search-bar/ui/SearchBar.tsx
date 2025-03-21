@@ -1,6 +1,7 @@
 import { SearchIcon } from "@/shared/icons/SearchIcon";
 import { Input } from "@/shared/ui/input/Input";
 import { useUsersSearch } from "../model/useUsersSearch";
+import { useTranslation } from "react-i18next";
 
 interface SearchBarProps {
   renderAction?: () => React.ReactNode;
@@ -8,6 +9,7 @@ interface SearchBarProps {
 
 export const SearchBar = ({ renderAction }: SearchBarProps) => {
   const { handleSearch, searchTerm } = useUsersSearch();
+  const { t } = useTranslation("common");
 
   return (
     <Input
@@ -16,7 +18,7 @@ export const SearchBar = ({ renderAction }: SearchBarProps) => {
       style={{ width: "100%" }}
       id="search"
       name="search"
-      placeholder="Введите имя, фамилию, тег"
+      placeholder={t("searchPlaceholder")}
       renderIcon={() => <SearchIcon />}
       renderActions={renderAction}
     />

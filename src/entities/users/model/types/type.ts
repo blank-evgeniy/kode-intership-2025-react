@@ -24,7 +24,6 @@ export const Department = {
   management: "management",
   analytics: "analytics",
   qa: "qa",
-  back_office: "back_office",
   frontend: "frontend",
   hr: "hr",
   pr: "pr",
