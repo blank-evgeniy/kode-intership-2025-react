@@ -1,4 +1,6 @@
-const months = [
+import { Language } from "../types";
+
+const ruMonths = [
   "января",
   "февраля",
   "марта",
@@ -13,9 +15,25 @@ const months = [
   "декабря",
 ];
 
-export const formatDate = (date: Date) => {
+const enMonths = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+export const formatDate = (date: Date, language: Language = "ru") => {
   const day = date.getDate();
-  const month = months[date.getMonth()];
+  const month =
+    language === "ru" ? ruMonths[date.getMonth()] : enMonths[date.getMonth()];
   const year = date.getFullYear();
 
   return `${day} ${month} ${year}`;

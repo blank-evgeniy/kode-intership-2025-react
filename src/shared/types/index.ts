@@ -9,3 +9,5 @@ export type CssSize = `${number}${
   | "%"}`;
 
 export type CssTextWeight = "400" | "500" | "600" | "700";
+
+export type Language = "ru" | "en";
