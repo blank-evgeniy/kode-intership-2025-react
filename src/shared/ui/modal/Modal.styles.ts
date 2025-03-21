@@ -19,7 +19,7 @@ export const ModalWrapper = styled.div<{ $isOpen: boolean }>`
 export const ModalContent = styled.div`
   position: relative;
 
-  background-color: var(--background-main);
+  background-color: var(--modal-color);
   padding: 24px 16px 8px 16px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -56,4 +56,9 @@ export const CrossButton = styled.button`
 
   height: 24px;
   width: 24px;
+  padding: 4px;
+
+  &:hover {
+    color: var(--accent-color);
+  }
 `;

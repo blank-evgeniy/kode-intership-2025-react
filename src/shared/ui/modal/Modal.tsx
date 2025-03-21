@@ -7,6 +7,7 @@ import {
   ModalWrapper,
   StyledModalHeading,
 } from "./Modal.styles";
+import { CloseIcon } from "@/shared/icons/CloseIcon";
 
 export interface ModalProps {
   isOpen: boolean;
@@ -48,7 +49,9 @@ export const Modal = ({ children, isOpen, onClose }: ModalProps) => {
   return createPortal(
     <ModalWrapper $isOpen={isOpen} onClick={handleCLickOutside}>
       <ModalContent>
-        <CrossButton onClick={onClose}>x</CrossButton>
+        <CrossButton onClick={onClose}>
+          <CloseIcon />
+        </CrossButton>
         {children}
       </ModalContent>
     </ModalWrapper>,
