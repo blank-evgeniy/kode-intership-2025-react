@@ -1,7 +1,9 @@
-import { Heading } from "@/shared/ui/heading/Heading";
-import { HeaderActions, HeaderContainer } from "./Header.styles";
-import { ThemeToggler } from "@/widgets/theme-toggler/ui/ThemeToggler";
 import { Translation } from "react-i18next";
+import { Heading } from "@/shared/ui/heading/Heading";
+import { ThemeToggler } from "@/widgets/theme-toggler/ui/ThemeToggler";
+import { LanguageToggler } from "@/widgets/language-toggler";
+
+import { HeaderActions, HeaderContainer } from "./Header.styles";
 
 export const Header = () => (
   <HeaderContainer>
@@ -10,6 +12,7 @@ export const Header = () => (
     </Heading>
     <HeaderActions>
       <ThemeToggler />
+      <LanguageToggler />
     </HeaderActions>
   </HeaderContainer>
 );
