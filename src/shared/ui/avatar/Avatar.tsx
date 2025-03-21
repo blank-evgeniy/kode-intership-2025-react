@@ -12,7 +12,10 @@ export const Avatar = ({
   src,
   ...props
 }: AvatarProps) => {
-  const [avatarSrc, setAvatarSrc] = useState(src || AvatarPlaceholder);
+  // фотографии то грузятся с сервера, то нет, было решено оставить заглушку
+  // const [avatarSrc, setAvatarSrc] = useState(src || AvatarPlaceholder);
+  void src;
+  const [avatarSrc, setAvatarSrc] = useState(AvatarPlaceholder);
 
   return (
     <StyledAvatar
