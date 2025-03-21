@@ -12,17 +12,24 @@ export const sortUsersByBirthday: (
   return [...users]
     .map((user) => {
       const birthDate = new Date(user.birthday);
+      const nextBirthday = new Date(
+        today.getFullYear(),
+        birthDate.getMonth(),
+        birthDate.getDate()
+      );
 
-      birthDate.setFullYear(today.getFullYear());
-
-      if (birthDate < today) {
-        birthDate.setFullYear(today.getFullYear() + 1);
+      if (nextBirthday < today) {
+        nextBirthday.setFullYear(today.getFullYear() + 1);
       }
 
       return {
         ...user,
-        nextBirthdayYear: birthDate.getFullYear().toString(),
+        nextBirthdayDate: nextBirthday,
       };
     })
-    .sort((a, b) => a.nextBirthdayYear.localeCompare(b.nextBirthdayYear));
+    .sort((a, b) => a.nextBirthdayDate.getTime() - b.nextBirthdayDate.getTime())
+    .map((user) => ({
+      ...user,
+      nextBirthdayYear: user.nextBirthdayDate.getFullYear().toString(),
+    }));
 };

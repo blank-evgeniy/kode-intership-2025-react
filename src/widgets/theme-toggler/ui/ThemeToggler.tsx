@@ -1,7 +1,7 @@
 import { useTheme } from "@/app/providers/theme/useTheme";
 import { MoonIcon } from "@/shared/icons/MoonIcon";
 import { SunIcon } from "@/shared/icons/SunIcon";
-import { StyledThemeToggler } from "./ThemeToggler.styles";
+import { Button } from "@/shared/ui/button/Button";
 
 export const ThemeToggler = () => {
   const { theme, setTheme } = useTheme();
@@ -11,8 +11,12 @@ export const ThemeToggler = () => {
   };
 
   return (
-    <StyledThemeToggler onClick={handleThemeChange}>
-      {theme === "light" ? <SunIcon /> : <MoonIcon />}
-    </StyledThemeToggler>
+    <Button onClick={handleThemeChange}>
+      {theme === "light" ? (
+        <SunIcon width={20} height={20} />
+      ) : (
+        <MoonIcon width={20} height={20} />
+      )}
+    </Button>
   );
 };
