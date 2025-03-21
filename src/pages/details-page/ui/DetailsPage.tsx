@@ -18,7 +18,9 @@ export const DetailsPage = () => {
 
   const dispatch = useAppDispatch();
   const user = useAppSelector((state) => selectUserById(state, id!));
-  const loading = useAppSelector(selectUsersLoading);
+  const loading = useAppSelector((state) =>
+    selectUsersLoading(state, Department.all)
+  );
 
   useEffect(() => {
     dispatch(fetchUsersByDepartment(Department.all));

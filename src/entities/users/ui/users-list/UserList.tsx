@@ -26,8 +26,10 @@ export const UserList = ({ department }: UserListProps) => {
 
   const sortBy = useAppSelector(selectUsersSortBy);
 
-  const loading = useAppSelector(selectUsersLoading);
-  const error = useAppSelector(selectUsersError);
+  const loading = useAppSelector((state) =>
+    selectUsersLoading(state, department)
+  );
+  const error = useAppSelector((state) => selectUsersError(state, department));
   const users = useAppSelector((state) =>
     selectFilteredUsers(state, department)
   );

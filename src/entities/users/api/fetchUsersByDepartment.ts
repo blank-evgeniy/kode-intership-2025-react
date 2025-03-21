@@ -14,8 +14,8 @@ export const fetchUsersByDepartment = createAsyncThunk<
     try {
       const state = getState().users;
 
-      const lastFetched = state.lastFetched[department];
-      const cachedUsers = state.departments[department];
+      const lastFetched = state.departments[department].lastFetched;
+      const cachedUsers = state.departments[department].users;
 
       if (cachedUsers && lastFetched && Date.now() - lastFetched < CACHE_TIME) {
         return cachedUsers;

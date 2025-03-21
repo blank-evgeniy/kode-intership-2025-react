@@ -8,7 +8,7 @@ export const selectFilteredUsers = (
 ) => {
   const searchTerm = selectUsersSearchTerm(state);
 
-  let users = state.users.departments[department];
+  let users = state.users.departments[department].users;
 
   if (searchTerm) {
     users = users.filter((user) => {
