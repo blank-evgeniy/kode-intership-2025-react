@@ -8,6 +8,9 @@ export const IconButton = styled.button`
   background: none;
   cursor: pointer;
   color: var(--input-placeholder);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
 
   aspect-ratio: 1/1;
 

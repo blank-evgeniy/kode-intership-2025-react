@@ -7,14 +7,15 @@ import { Header } from "@/widgets/header/ui/Header";
 
 export const MainPage = () => {
   return (
-    <Container>
+    <>
       <Header />
+      <Container>
+        <SearchBarContainer>
+          <AppSearchBar />
+        </SearchBarContainer>
 
-      <SearchBarContainer>
-        <AppSearchBar />
-      </SearchBarContainer>
-
-      <DepartmentsTabs />
-    </Container>
+        <DepartmentsTabs />
+      </Container>
+    </>
   );
 };

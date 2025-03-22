@@ -9,5 +9,9 @@ export const LanguageToggler = () => {
     i18n.changeLanguage(lng);
   };
 
-  return <Button onClick={() => changeLanguage()}>{t("language")}</Button>;
+  return (
+    <Button variant="icon" onClick={() => changeLanguage()}>
+      {t("language")}
+    </Button>
+  );
 };

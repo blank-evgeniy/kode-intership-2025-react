@@ -11,7 +11,7 @@ export const ThemeToggler = () => {
   };
 
   return (
-    <Button onClick={handleThemeChange}>
+    <Button variant="icon" onClick={handleThemeChange}>
       {theme === "light" ? (
         <SunIcon width={20} height={20} />
       ) : (
