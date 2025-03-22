@@ -11,7 +11,7 @@ import "@/app/config/i18n";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={"/kode-intership-2025-react"}>
       <Provider store={store}>
         <ThemeProvider>
           <App />

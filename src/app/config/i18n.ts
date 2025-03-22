@@ -14,7 +14,7 @@ i18n
       escapeValue: false,
     },
     backend: {
-      loadPath: "/locales/{{lng}}/{{ns}}.json",
+      loadPath: "/kode-intership-2025-react/locales/{{lng}}/{{ns}}.json",
     },
   });
 
