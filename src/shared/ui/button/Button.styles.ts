@@ -1,16 +1,21 @@
 import styled from "styled-components";
 
-export const IconButton = styled.button`
+export const StyledButton = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+
+  transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+`;
+
+export const IconButton = styled(StyledButton)`
   border: none;
   background: none;
   cursor: pointer;
   color: var(--input-placeholder);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
 
   aspect-ratio: 1/1;
 
@@ -19,18 +24,11 @@ export const IconButton = styled.button`
   }
 `;
 
-export const TextButton = styled.button`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+export const TextButton = styled(StyledButton)`
   border: none;
   background: none;
   cursor: pointer;
   color: var(--accent-color);
-
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
 
   &:hover {
     opacity: 0.8;
