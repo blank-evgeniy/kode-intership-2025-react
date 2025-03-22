@@ -1,5 +1,7 @@
 # Бланк Евгений - Тестовое задание KODE 2025
 
+Деплой на Github Pages: https://blank-evgeniy.github.io/kode-intership-2025-react
+
 ## Декомпозиция задания
 
 1. Просмотр и анализ макета на фигме и API
