@@ -1,0 +1,14 @@
+{
+  "all": "All",
+  "design": "Designers",
+  "analytics": "Analysts",
+  "ios": "iOS",
+  "android": "Android",
+  "hr": "HR",
+  "pr": "PR",
+  "backend": "Backend",
+  "frontend": "Frontend",
+  "qa": "QA",
+  "support": "Support",
+  "management": "Management"
+}

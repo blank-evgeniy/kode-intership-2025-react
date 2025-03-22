@@ -1,0 +1,10 @@
+{
+  "language": "EN",
+  "search": "Search",
+  "searchPlaceholder": "Search by name, surname, tag",
+  "sorting": "Sorting",
+  "byAlphabet": "By alphabet",
+  "byBirthday": "By birthday",
+  "offline": "Can't update the data. Check your internet connection.",
+  "online": "Just a second, I'm loading up..."
+}
