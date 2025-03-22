@@ -20,7 +20,12 @@ export const StyledSkeleton = styled.div<{
   width: ${({ $width }) => $width || "100%"};
   height: ${({ $height }) => $height || "20px"};
   border-radius: ${({ $radius }) => $radius || "50px"};
-  background: linear-gradient(270deg, #f3f3f6, #fafafa, #f3f3f6);
+  background: linear-gradient(
+    270deg,
+    var(--skeleton-gradient-to),
+    var(--skeleton-gradient-from),
+    var(--skeleton-gradient-to)
+  );
   background-size: 400% 100%;
   animation: ${skeletonAnimation} 3s infinite linear;
 `;
