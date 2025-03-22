@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://blank-evgeniy.github.io/kode-intership-2025-react",
+  "homepage": "https://blank-evgeniy.github.io/kode-intership-2025-react/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
