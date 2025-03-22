@@ -4,6 +4,7 @@ import { createPortal } from "react-dom";
 import {
   CrossButton,
   ModalContent,
+  ModalOverlay,
   ModalWrapper,
   StyledModalHeading,
 } from "./Modal.styles";
@@ -47,10 +48,11 @@ export const Modal = ({ children, isOpen, onClose }: ModalProps) => {
   }, [isOpen, lockScroll, unlockScroll]);
 
   return createPortal(
-    <ModalWrapper $isOpen={isOpen} onClick={handleCLickOutside}>
+    <ModalWrapper $isOpen={isOpen}>
+      <ModalOverlay onClick={handleCLickOutside} />
       <ModalContent>
         <CrossButton onClick={onClose}>
-          <CloseIcon />
+          <CloseIcon style={{ zIndex: 40 }} />
         </CrossButton>
         {children}
       </ModalContent>
