@@ -20,12 +20,16 @@ export const HeaderContainer = styled.div<{
 export const StyledHeader = styled.header`
   max-width: var(--page-container);
 
-  padding: 16px 8px 12px 8px;
+  padding: 16px 16px 12px 16px;
   margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: 420px) {
+    padding: 16px 8px 12px 8px;
+  }
 `;
 
 export const HeaderActions = styled.div`
