@@ -5,21 +5,28 @@ import { Link } from "react-router";
 import { Text } from "@/shared/ui/text/Text";
 import { TextColors } from "@/shared/ui/text/types";
 import {
+  DateText,
   InfoContainer,
   NameContainer,
   UserCardContainer,
 } from "./UserCard.styles";
 import { RoutePath } from "@/app/config/routes";
+import { generatePath } from "react-router";
+import { formatDate } from "@/shared/utils/formatDate";
+import { useTranslation } from "react-i18next";
+import { Language } from "@/shared/types";
 
 interface UserCardProps {
   user: User;
+  showDate?: boolean;
 }
 
-export const UserCard = ({ user }: UserCardProps) => {
-  const { avatarUrl, lastName, firstName, userTag, position } = user;
+export const UserCard = ({ user, showDate }: UserCardProps) => {
+  const { i18n } = useTranslation();
+  const { avatarUrl, lastName, firstName, userTag, position, birthday } = user;
 
   return (
-    <Link to={RoutePath.DETAILS.replace(":id", user.id)}>
+    <Link to={generatePath(RoutePath.DETAILS, { id: user.id })}>
       <UserCardContainer>
         <Avatar alt={`${firstName} ${lastName}`} size="md" src={avatarUrl} />
 
@@ -35,6 +42,10 @@ export const UserCard = ({ user }: UserCardProps) => {
           </NameContainer>
           <Text $color={TextColors.tertiary}>{position}</Text>
         </InfoContainer>
+        <DateText>
+          {showDate &&
+            formatDate(new Date(birthday), i18n.language as Language, true)}
+        </DateText>
       </UserCardContainer>
     </Link>
   );

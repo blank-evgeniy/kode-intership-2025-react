@@ -22,6 +22,15 @@ export const InfoContainer = styled.div`
   gap: 6px;
 `;
 
+export const DateText = styled.span`
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  margin-left: auto;
+  padding-right: 12px;
+`;
+
 export const NameContainer = styled.div`
   display: flex;
   gap: 4px;

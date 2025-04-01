@@ -24,7 +24,7 @@ export const UserCardsWithSeparator = ({
   return (
     <>
       {usersWithBirthdayThisYear.map((user) => (
-        <UserCard user={user} key={user.id} />
+        <UserCard showDate user={user} key={user.id} />
       ))}
       {usersWithBirthdayThisYear.length > 0 &&
         usersWithBirthdayNextYear.length > 0 && (
@@ -35,7 +35,7 @@ export const UserCardsWithSeparator = ({
           </SeparatorContainer>
         )}
       {usersWithBirthdayNextYear.map((user) => (
-        <UserCard user={user} key={user.id} />
+        <UserCard showDate user={user} key={user.id} />
       ))}
     </>
   );
