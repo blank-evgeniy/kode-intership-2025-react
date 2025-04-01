@@ -43,7 +43,7 @@ export const UserList = ({ department }: UserListProps) => {
   }
 
   if (error) {
-    return <UsersError />;
+    return <UsersError currentDepartment={department} />;
   }
 
   if (users.length === 0) {

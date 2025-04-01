@@ -4,9 +4,19 @@ import { TextColors } from "@/shared/ui/text/types";
 import { Button } from "@/shared/ui/button/Button";
 import ErrorImage from "@/shared/images/flying-saucer.png";
 import { StatusContainer, StatusTextContainer } from "./UsersStatus.styles";
+import { useAppDispatch } from "@/app/store/hooks";
+import { fetchUsersByDepartment } from "../../api/fetchUsersByDepartment";
+import { Department } from "../../model/types/type";
 
-export const UsersError = () => {
-  const handleTryAgain = () => window.location.reload();
+interface UsersErrorProps {
+  currentDepartment: Department;
+}
+
+export const UsersError = ({ currentDepartment }: UsersErrorProps) => {
+  const dispatch = useAppDispatch();
+
+  const handleTryAgain = () =>
+    dispatch(fetchUsersByDepartment(currentDepartment));
 
   return (
     <StatusContainer>
