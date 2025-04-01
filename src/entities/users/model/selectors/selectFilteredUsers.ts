@@ -12,16 +12,17 @@ export const selectFilteredUsers = (
 
   if (searchTerm) {
     users = users.filter((user) => {
-      const searchTermToLowerCase = searchTerm.toLowerCase();
+      const searchKeys = searchTerm.toLowerCase().trim().split(" ");
 
-      const fullName = `${user.firstName} ${user.lastName}`.toLowerCase();
+      const isMatched = searchKeys.every((searchKey) => {
+        return (
+          user.firstName.toLowerCase().includes(searchKey) ||
+          user.lastName.toLowerCase().includes(searchKey) ||
+          user.userTag.toLowerCase().includes(searchKey)
+        );
+      });
 
-      const nameMatches = fullName.includes(searchTermToLowerCase);
-      const userTagMatches = user.userTag
-        .toLowerCase()
-        .includes(searchTermToLowerCase);
-
-      return nameMatches || userTagMatches;
+      return isMatched;
     });
   }
 
